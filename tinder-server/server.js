@@ -8,10 +8,7 @@ import Pusher from 'pusher'
 //App config
 const app = express();
 const port = process.env.PORT || 8001;
-//const connection_url = 'mongodb+srv://admin:zdhdAM4CNS6RQ7up@cluster0.3j9kv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&ssl=true'
-//mongodb+srv://admin:zdhdAM4CNS6RQ7up@cluster0.3j9kv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-
-const connection_url = 'mongodb://admin:zdhdAM4CNS6RQ7up@cluster0-shard-00-00.3j9kv.mongodb.net:27017,cluster0-shard-00-01.3j9kv.mongodb.net:27017,cluster0-shard-00-02.3j9kv.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-11va5o-shard-0&authSource=admin&retryWrites=true&w=majority'
+const connection_url = '' //your url
 
 //MIddleware
 app.use(express.json());
@@ -19,10 +16,10 @@ app.use(Cors());
 
 //pusher
 const pusher = new Pusher({
-    appId: "1171395",
-    key: "af6db6e1fbc26b9813d7",
-    secret: "6f8e7b6d719665eade4c",
-    cluster: "ap2",
+    appId: "", //your appId
+    key: "",//your key
+    secret: "",//your secret
+    cluster: "", //your cluster
     useTLS: true
 });
 
