@@ -31,6 +31,7 @@ function LandingPage() {
         setEmail('')
         setPassword('')
         setUrl('')
+        setIsLogin(true)
     }
 
     const login = async () => {
@@ -45,6 +46,7 @@ function LandingPage() {
                     type: 'SET_USER',
                     user: data.data.user
                 })
+                history.push('/')
             })
     }
 
